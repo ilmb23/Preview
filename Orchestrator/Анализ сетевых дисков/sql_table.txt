@@ -1,0 +1,28 @@
+CREATE TABLE [dbo].[FileShare_audit](
+	[Path] [nvarchar](255) NULL,
+	[Auditrule] [nvarchar](1000) NULL,
+	[parent] [nvarchar](255) NULL,
+	[parent_auditrule] [nvarchar](1000) NULL,
+	[Date] [date] NULL
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[FileShare_errors](
+	[Path] [nvarchar](500) NULL,
+	[CategoryInfo] [nvarchar](255) NULL,
+	[Date] [date] NULL
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[FileShare](
+	[Path] [nvarchar](255) NULL,
+	[Files] [bigint] NULL,
+	[Containers] [bigint] NULL,
+	[Sum] [bigint] NULL,
+	[Length_GB] [nvarchar](255) NULL,
+	[Length_B] [bigint] NULL,
+    [AuditProblems] [bigint] NULL,
+	[JobTime] [nvarchar](255) NULL,
+	[Date] [date] NULL
+) ON [PRIMARY]
+GO
